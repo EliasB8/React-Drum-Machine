@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: #58b4ae;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+}
+
+.title {
+  padding: 20px;
+  color: #ffe2bc;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+}
