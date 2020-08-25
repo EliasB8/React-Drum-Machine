@@ -1,4 +1,6 @@
 import React from "react";
+import Drum from "./Drum";
+import Controller from "./Controller";
 
 class Main extends React.Component {
   constructor(props) {
@@ -8,7 +10,10 @@ class Main extends React.Component {
   render() {
     return (
       <>
-        <div></div>
+        <div id="drum-machine" className="drum-machine-container">
+          <Drum />
+          <Controller />
+        </div>
       </>
     );
   }

@@ -1,12 +1,13 @@
 import React from "react";
 import "./styles.css";
+import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <div className="App">
-      <h1 className="title">Drum Machine</h1>
+      <Header />
       <Main />
       <Footer />
     </div>
