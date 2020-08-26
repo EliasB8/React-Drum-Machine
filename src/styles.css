@@ -12,10 +12,12 @@
 }
 
 .title {
-  padding: 20px;
+  padding: 25px;
+  padding-top: 80px;
   color: #ffe2bc;
   font-family: "Lato", sans-serif;
   font-size: 3rem;
+  margin-bottom: 65px;
 }
 
 .footer {
@@ -24,7 +26,7 @@
   border-top: 2px solid #ffb367;
   color: white;
   min-width: 100%;
-  margin-top: 20%;
+  margin-top: 16%;
   position: relative;
   bottom: 0%;
 }
@@ -34,9 +36,9 @@
   justify-content: center;
   align-items: center;
   min-width: 340px;
-  width: 60%;
+  width: 50%;
   background: #ffb367 linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
   border: 5px solid #ffe2bc;
@@ -100,6 +102,11 @@
 
   .controller-container {
     width: 80%;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    padding-top: 30px;
   }
 }
 
