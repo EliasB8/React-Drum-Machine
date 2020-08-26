@@ -22,4 +22,10 @@ const smoothPianoKit = {
   Snare: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
 };
 
-export { heaterKit, smoothPianoKit };
+const keys = {
+  col1: ["Q", "A", "Z"],
+  col2: ["W", "S", "X"],
+  col3: ["E", "D", "C"]
+};
+
+export { heaterKit, smoothPianoKit, keys };

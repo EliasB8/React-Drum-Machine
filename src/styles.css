@@ -24,7 +24,8 @@
   border-top: 2px solid #ffb367;
   color: white;
   min-width: 100%;
-  position: absolute;
+  margin-top: 20%;
+  position: relative;
   bottom: 0%;
 }
 
@@ -32,8 +33,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 360px;
-  width: 50%;
+  min-width: 340px;
+  width: 60%;
   background: #ffb367 linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   padding: 20px;
   margin: 0 auto;
@@ -41,16 +42,261 @@
   border: 5px solid #ffe2bc;
 }
 
-@media screen and (max-width: 650px) {
-  .drum-machine-container {
-    flex-direction: column;
-  }
-}
-
 .drum-container {
   width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .controller-container {
   width: 35%;
 }
+
+.key {
+  width: 60px;
+  height: 30px;
+  padding: 25px;
+  background-color: #ffe2bc;
+  margin: 18px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 3px 3px 3px 4px #b78f6a; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  transition: all 0.3s ease-in;
+}
+
+.key:hover {
+  cursor: pointer;
+  /* background-color: #ffe2bccb;
+  text-shadow: 3px 2px 3px #ffb367;
+  box-shadow: inset 3px 3px 4px #b78f6a; */
+}
+
+.bank-display {
+  background-color: #ffe2bc;
+  width: 180px;
+  height: 65px;
+  margin: 15px auto;
+}
+
+.toggles {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.controller-labels {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .drum-machine-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .controller-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .key {
+    width: 24%;
+    height: 22px;
+  }
+}
+
+/* SLIDER STYLE FROM W3SCHOOL */
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 65%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #ffe2bc; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+  .slider {
+    width: 50%; /* Full-width */
+  }
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #58b4ae; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 100%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* SLIDER IS OVER */
+
+/* toggle BUTTON CODE FROM SOMEONE => https://codepen.io/marcusconnor/pen/QJNvMa */
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  font-size: 8px;
+}
+
+/* Switch starts here */
+.rocker {
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #eee;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid #eee;
+  border-bottom: 0;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+  background-color: #58b4ae;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+input:focus + .switch-left {
+  color: #333;
+}
+
+input:checked:focus + .switch-left {
+  color: #fff;
+}
+
+input:focus + .switch-left + .switch-right {
+  color: #fff;
+}
+
+input:checked:focus + .switch-left + .switch-right {
+  color: #333;
+}
+
+/* ALL OF THIS IS SOME ONE ELSES WORK */
