@@ -100,6 +100,7 @@
   height: 65px;
   margin: 15px auto;
   color: black;
+  text-align: center;
 }
 
 .toggles {
@@ -135,6 +136,12 @@
   }
 }
 
+.display-text {
+  padding-top: 20px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+}
 /* SLIDER STYLE FROM W3SCHOOL */
 
 .slidecontainer {
