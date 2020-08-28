@@ -46,7 +46,7 @@
 
 .drum-container {
   width: 60%;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -56,7 +56,7 @@
   width: 35%;
 }
 
-.key {
+.drum-pad {
   width: 60px;
   height: 30px;
   padding: 25px;
@@ -67,14 +67,31 @@
   font-size: 2rem;
   font-weight: bold;
   box-shadow: 3px 3px 3px 4px #b78f6a; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease-in;
 }
 
-.key:hover {
+.drum-pad:hover {
   cursor: pointer;
-  /* background-color: #ffe2bccb;
-  text-shadow: 3px 2px 3px #ffb367;
-  box-shadow: inset 3px 3px 4px #b78f6a; */
+}
+
+.drum-pad-animate {
+  animation-name: drum;
+  animation-duration: 1s;
+}
+
+.key-col {
+  display: flex;
+}
+
+@keyframes drum {
+  from {
+    text-shadow: none;
+  }
+  to {
+    background-color: #f7ad4d;
+    text-shadow: 3px 2px 3px #ffb367;
+    box-shadow: inset 3px 3px 4px #b78f6a;
+  }
 }
 
 .bank-display {
@@ -112,7 +129,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .key {
+  .drum-pad {
     width: 24%;
     height: 22px;
   }

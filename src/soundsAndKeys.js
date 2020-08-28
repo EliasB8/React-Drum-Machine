@@ -23,9 +23,10 @@ const smoothPianoKit = {
 };
 
 const keys = {
-  col1: ["Q", "A", "Z"],
-  col2: ["W", "S", "X"],
-  col3: ["E", "D", "C"]
+  col1: ["Q", "W", "E"],
+  col2: ["A", "S", "D"],
+  col3: ["Z", "X", "C"],
+  allKeys: ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]
 };
 
 export { heaterKit, smoothPianoKit, keys };
