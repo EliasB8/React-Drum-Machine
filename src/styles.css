@@ -76,7 +76,7 @@
 
 .drum-pad-animate {
   animation-name: drum;
-  animation-duration: 1s;
+  animation-duration: 0.25s;
 }
 
 .key-col {
