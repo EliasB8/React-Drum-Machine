@@ -57,7 +57,6 @@ class Main extends React.Component {
     });
     keys.allKeys.forEach((element) => {
       if (keypad === element || keypad.toUpperCase() === element) {
-        console.log(element);
         this.playSounds(element);
       }
     });
@@ -66,9 +65,12 @@ class Main extends React.Component {
   playSounds(item) {
     if (this.state.power) {
       document.getElementById(item).play();
-      this.handleDisplay(
-        document.getElementById(item).parentElement.id.split("-").join(" ")
-      );
+      const id = document.getElementById(item).parentElement.id;
+      document.getElementById(id).classList.add("drum-pad-animate");
+      setTimeout(() => {
+        document.getElementById(id).classList.remove("drum-pad-animate");
+      }, 300);
+      this.handleDisplay(id.split("-").join(" "));
     }
   }
 
