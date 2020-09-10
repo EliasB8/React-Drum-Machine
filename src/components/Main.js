@@ -6,6 +6,8 @@ import { keys } from "../soundsAndKeys";
 class Main extends React.Component {
   constructor(props) {
     super(props);
+
+    // Initial states
     this.state = {
       power: true,
       display: "",
@@ -14,6 +16,8 @@ class Main extends React.Component {
       activeKey: "",
       disabledController: false
     };
+
+    // binding functions to use state
     this.handlePower = this.handlePower.bind(this);
     this.handleDisplay = this.handleDisplay.bind(this);
     this.handleVolume = this.handleVolume.bind(this);
@@ -23,6 +27,7 @@ class Main extends React.Component {
     this.handleVolumeLevel = this.handleVolumeLevel.bind(this);
   }
 
+  // adding keypress and click event listeners on mount
   componentDidMount() {
     document.querySelectorAll(".drum-pad").forEach((item) => {
       item.addEventListener("click", (event) => {
@@ -33,6 +38,7 @@ class Main extends React.Component {
     document.addEventListener("keypress", this.handleKeyPress);
   }
 
+  // removing keypress and click event listeners on unmount
   componentWillUnmount() {
     document.querySelectorAll(".drum-pad").forEach((item) => {
       item.removeEventListener("click", (event) => {
@@ -43,6 +49,7 @@ class Main extends React.Component {
     document.removeEventListener("keypress", this.handleKeyPress);
   }
 
+  // handling key click event
   handleKeyClick(keypad) {
     this.playSounds(keypad);
     this.setState({
@@ -50,6 +57,7 @@ class Main extends React.Component {
     });
   }
 
+  // handling key press event
   handleKeyPress(event) {
     const keypad = String.fromCharCode(event.keyCode);
     this.setState({
@@ -62,6 +70,8 @@ class Main extends React.Component {
     });
   }
 
+  // playing sound based on key clicked or pressed and bank type
+  // adding drum effect animation when clicked or key pressed
   playSounds(item) {
     if (this.state.power) {
       document.getElementById(item).play();
@@ -74,6 +84,7 @@ class Main extends React.Component {
     }
   }
 
+  // turn power on or off
   handlePower() {
     this.setState((state) => ({
       power: !state.power,
@@ -82,12 +93,15 @@ class Main extends React.Component {
     const powerStatus = !this.state.power ? "ON" : "OFF";
     this.handleDisplay("Power : " + powerStatus);
   }
+
+  // displaying current user interaction information
   handleDisplay(text) {
     this.setState({
       display: text
     });
   }
 
+  // setting volume in state
   handleVolume(level) {
     this.setState({
       volume: level
@@ -95,6 +109,7 @@ class Main extends React.Component {
     this.handleVolumeLevel();
   }
 
+  // affecting the volume of the audios
   handleVolumeLevel() {
     const Audios = document.getElementsByTagName("AUDIO");
     for (let i = 0; i < Audios.length; i++) {
@@ -103,6 +118,7 @@ class Main extends React.Component {
     this.handleDisplay("Volume : " + Math.floor(this.state.volume * 100));
   }
 
+  // changing bank
   handleBank() {
     this.setState((state) => ({
       bankHK: !state.bankHK
