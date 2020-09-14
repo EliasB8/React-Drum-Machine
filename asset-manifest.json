@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-Drum-Machine/static/css/main.5ba8ecb8.chunk.css",
+    "main.css": "/React-Drum-Machine/static/css/main.6a5ff62c.chunk.css",
     "main.js": "/React-Drum-Machine/static/js/main.b0cb00cd.chunk.js",
     "main.js.map": "/React-Drum-Machine/static/js/main.b0cb00cd.chunk.js.map",
     "runtime~main.js": "/React-Drum-Machine/static/js/runtime~main.fd917ff3.js",
@@ -8,8 +8,8 @@
     "static/js/2.57be2c8e.chunk.js": "/React-Drum-Machine/static/js/2.57be2c8e.chunk.js",
     "static/js/2.57be2c8e.chunk.js.map": "/React-Drum-Machine/static/js/2.57be2c8e.chunk.js.map",
     "index.html": "/React-Drum-Machine/index.html",
-    "precache-manifest.8ad72852a6a03f38b32172a1efc91891.js": "/React-Drum-Machine/precache-manifest.8ad72852a6a03f38b32172a1efc91891.js",
+    "precache-manifest.93be848c8286f7c1cb96065832287af3.js": "/React-Drum-Machine/precache-manifest.93be848c8286f7c1cb96065832287af3.js",
     "service-worker.js": "/React-Drum-Machine/service-worker.js",
-    "static/css/main.5ba8ecb8.chunk.css.map": "/React-Drum-Machine/static/css/main.5ba8ecb8.chunk.css.map"
+    "static/css/main.6a5ff62c.chunk.css.map": "/React-Drum-Machine/static/css/main.6a5ff62c.chunk.css.map"
   }
 }
